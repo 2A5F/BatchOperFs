@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="imp.fs" />
     <Compile Include="BatchOper.fs" />
   </ItemGroup>
 

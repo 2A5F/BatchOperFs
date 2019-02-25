@@ -1,37 +1,50 @@
 module BatchOper
 
-type OperBuilder(logic: bool -> bool -> bool) =
+type OrBuilder() =
+    member __.Yield _ = fun c x -> c x
 
-    member inline __.Yield _ = fun _ _ -> false
-
-    member __.Run (f) = fun x -> f x logic
+    member __.Run f = fun x -> (f <| fun _ -> false) x
 
     [<CustomOperation("eq", AllowIntoPattern = true)>]
-    member __.Equals(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() = x) 
+    member __.Equals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() = x || c x
 
     [<CustomOperation("ne", AllowIntoPattern = true)>]
-    member __.NotEquals(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() <> x) 
+    member __.NotEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <> x || c x
 
     [<CustomOperation("gt", AllowIntoPattern = true)>]
-    member __.GreaterThan(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() > x)
+    member __.GreaterThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() > x || c x
 
     [<CustomOperation("lt", AllowIntoPattern = true)>]
-    member __.LessThan(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() < x)
+    member __.LessThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() < x || c x
 
     [<CustomOperation("ge", AllowIntoPattern = true)>]
-    member __.GreaterEquals(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() >= x)
+    member __.GreaterEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() >= x || c x
 
     [<CustomOperation("le", AllowIntoPattern = true)>]
-    member __.LessEquals(f, [<ProjectionParameter>] a) = fun x logic -> logic (f x logic) (a() <= x)
-
-
-type OrBuilder() =
-    inherit OperBuilder(fun l r -> l || r)
+    member __.LessEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <= x || c x
 
 type AndBuilder() =
-    inherit OperBuilder(fun l r -> l && r)
+    member __.Yield _ = fun c x -> c x
 
-let inline oper logic = OperBuilder(logic)
-let orb = OrBuilder()
-let andb = AndBuilder()
+    member __.Run f = fun x -> (f <| fun _ -> true) x
 
+    [<CustomOperation("eq", AllowIntoPattern = true)>]
+    member __.Equals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() = x && c x
+
+    [<CustomOperation("ne", AllowIntoPattern = true)>]
+    member __.NotEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <> x && c x
+
+    [<CustomOperation("gt", AllowIntoPattern = true)>]
+    member __.GreaterThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() > x && c x
+
+    [<CustomOperation("lt", AllowIntoPattern = true)>]
+    member __.LessThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() < x && c x
+
+    [<CustomOperation("ge", AllowIntoPattern = true)>]
+    member __.GreaterEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() >= x && c x
+
+    [<CustomOperation("le", AllowIntoPattern = true)>]
+    member __.LessEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <= x && c x
+
+let batchOr = OrBuilder()
+let batchAnd = AndBuilder()

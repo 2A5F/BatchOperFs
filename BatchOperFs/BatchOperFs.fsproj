@@ -2,14 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>BatchOper</PackageId>
+    <Authors>BatchOperator</Authors>
+    <Company>BatchOperator</Company>
+    <Product>BatchOper</Product>
+    <Copyright>Copyright (c) BatchOperator</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/BatchOperator/BatchOperFs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BatchOperator/BatchOperFs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>BatchOper</AssemblyName>
+    <Description>BatchOperator</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="BatchOper.fs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FSharp.Quotations.Evaluator" Version="1.1.3" />
   </ItemGroup>
 
   <ItemGroup>

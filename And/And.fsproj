@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>BatchOper.And</AssemblyName>
+    <Description>BatchOper.And</Description>
+    <Copyright>Copyright (c) BatchOperator</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/BatchOperator/BatchOperFs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BatchOperator/BatchOperFs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="And.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.5.2" />
+  </ItemGroup>
+
+</Project>

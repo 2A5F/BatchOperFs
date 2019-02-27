@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
+    <Copyright>Copyright (c) BatchOperator</Copyright>
+    <Description>BatchOperator.Loop</Description>
+    <PackageProjectUrl>https://github.com/BatchOperator/BatchOperFs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BatchOperator/BatchOperFs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyName>BatchOper.Loop</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Loop.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.5.2" />
+  </ItemGroup>
+
+</Project>

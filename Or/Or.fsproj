@@ -2,28 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>BatchOper</PackageId>
-    <Authors>BatchOperator</Authors>
-    <Company>BatchOperator</Company>
-    <Product>BatchOper</Product>
+    <AssemblyName>BatchOper.Or</AssemblyName>
+    <Description>BatchOper.Or</Description>
     <Copyright>Copyright (c) BatchOperator</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/BatchOperator/BatchOperFs</PackageProjectUrl>
     <RepositoryUrl>https://github.com/BatchOperator/BatchOperFs</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>BatchOper</AssemblyName>
-    <Description>BatchOperator</Description>
-    <Version>1.0.1</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="BatchOper.fs" />
+    <Compile Include="Or.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="FSharp.Core" Version="4.6.2" />
+    <PackageReference Update="FSharp.Core" Version="4.5.2" />
   </ItemGroup>
 
 </Project>

@@ -5,27 +5,27 @@ type BatchAndBuilder() =
 
     member __.Run f = fun x -> (f <| fun _ -> true) x
 
-    [<CustomOperation("eq", AllowIntoPattern = true)>]
+    [<CustomOperation("eq")>]
     /// Equal
     member __.Equals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() = x && c x
 
-    [<CustomOperation("ne", AllowIntoPattern = true)>]
+    [<CustomOperation("ne")>]
     /// Not equal
     member __.NotEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <> x && c x
 
-    [<CustomOperation("gt", AllowIntoPattern = true)>]
+    [<CustomOperation("gt")>]
     /// Greater than
     member __.GreaterThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() > x && c x
 
-    [<CustomOperation("lt", AllowIntoPattern = true)>]
+    [<CustomOperation("lt")>]
     /// Less than
     member __.LessThan(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() < x && c x
 
-    [<CustomOperation("ge", AllowIntoPattern = true)>]
+    [<CustomOperation("ge")>]
     /// Greater then or equal
     member __.GreaterEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() >= x && c x
 
-    [<CustomOperation("le", AllowIntoPattern = true)>]
+    [<CustomOperation("le")>]
     /// Less then or equal
     member __.LessEquals(f, [<ProjectionParameter>] a) = fun c -> f <| fun x -> a() <= x && c x
 

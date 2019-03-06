@@ -13,10 +13,10 @@
     <AssemblyName>BatchOper.Fs.Loop</AssemblyName>
     <PackageId>BatchOper.Fs.Loop</PackageId>
     <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.Loop.png</PackageIconUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="LoopExpr.fs" />
     <Compile Include="Loop.fs" />
   </ItemGroup>
 

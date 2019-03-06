@@ -13,6 +13,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>BatchOper.Fs.And</PackageId>
     <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.And.png</PackageIconUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

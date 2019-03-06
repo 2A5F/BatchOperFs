@@ -10,10 +10,13 @@
     <PackageProjectUrl>https://github.com/BatchOperator/BatchOperFs</PackageProjectUrl>
     <RepositoryUrl>https://github.com/BatchOperator/BatchOperFs</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyName>BatchOper.Loop</AssemblyName>
+    <AssemblyName>BatchOper.Fs.Loop</AssemblyName>
+    <PackageId>BatchOper.Fs.Loop</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.Loop.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="LoopExpr.fs" />
     <Compile Include="Loop.fs" />
   </ItemGroup>
 

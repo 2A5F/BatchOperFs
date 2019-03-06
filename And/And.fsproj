@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>BatchOper.And</AssemblyName>
+    <AssemblyName>BatchOper.Fs.And</AssemblyName>
     <Description>BatchOper.And</Description>
     <Copyright>Copyright (c) BatchOperator</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
@@ -11,6 +11,8 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>BatchOper.Fs.And</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.And.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

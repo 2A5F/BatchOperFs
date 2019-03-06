@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>BatchOper.Or</AssemblyName>
+    <AssemblyName>BatchOper.Fs.Or</AssemblyName>
     <Description>BatchOper.Or</Description>
     <Copyright>Copyright (c) BatchOperator</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/LICENSE</PackageLicenseUrl>
@@ -11,6 +11,7 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.Or.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

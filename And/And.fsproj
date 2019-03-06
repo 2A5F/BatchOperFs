@@ -12,7 +12,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>BatchOper.Fs.And</PackageId>
-    <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/img/BatchOper.Fs.And.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/BatchOperator/BatchOperFs/master/Img/BatchOper.Fs.And.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

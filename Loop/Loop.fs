@@ -1,12 +1,7 @@
 module BatchOper.Loop
 
 open System.Collections.Generic
-
-type BreakOrContinue =
-/// The break statement terminates the closest enclosing loop
-| Break
-/// The continue statement passes control to the next iteration of the enclosing loop statement in which it appears.
-| Continue
+open BatchOper.BreakOrContinue
 
 /// Loop with Break and Continue 
 /// 

@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="BreakOrContinue.fs" />
     <Compile Include="LoopExpr.fs" />
     <Compile Include="Loop.fs" />
   </ItemGroup>

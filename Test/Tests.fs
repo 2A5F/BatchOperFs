@@ -4,6 +4,7 @@ open Xunit
 open BatchOper.Or
 open BatchOper.And
 open BatchOper.Loop
+open BatchOper.BreakOrContinue
 
 type CountClass<'a>(v: 'a) =
     let mutable count = 0
